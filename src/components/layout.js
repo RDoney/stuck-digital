@@ -8,10 +8,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import Header from './header'
-// import './layout.css'
+import Footer from './footer'
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
+    font-family: Roboto Mono, monospace;
+  }
+`
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
@@ -33,14 +40,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata.title} />
         <ContentWrapper>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer />
         </ContentWrapper>
       </>
     )}
