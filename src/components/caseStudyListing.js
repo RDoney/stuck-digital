@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const LISTING_QUERY = graphql`
   query {
     allMarkdownRemark(
-      limit: 5
+      limit: 7
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -22,28 +22,20 @@ const LISTING_QUERY = graphql`
   }
 `
 
-const Post = styled.article`
-  box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
-  padding: 1rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  font-weight: 300;
-`
-
-const Listing = () => (
+const CaseStudyListing = () => (
   <StaticQuery
     query={LISTING_QUERY}
     render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(edge => (
-        <Post key={edge.node.frontmatter.slug}>
-          <h2>{edge.node.frontmatter.title}</h2>
+        <article key={edge.node.frontmatter.slug}>
+          <h2 style={{ fontWeight: '400' }}>{edge.node.frontmatter.title}</h2>
           <Link to={`/case-studies${edge.node.frontmatter.slug}`}>
             Read More
           </Link>
-        </Post>
+        </article>
       ))
     }
   />
 )
 
-export default Listing
+export default CaseStudyListing

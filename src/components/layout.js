@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
-  max-width: 90%;
+  width: 90%;
+  max-width: 1240px;
   padding: 0px 1.0875rem 1.45rem;
 `
 

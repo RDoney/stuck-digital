@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     title: `Stuck Digital`,
     description: `The Stuck Digital site description from config file`,
-    author: `Config Author`,
+    author: `gatsby-config Author`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

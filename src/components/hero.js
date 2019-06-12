@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeroWrapper = styled.div`
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -5,12 +5,11 @@ import styled from 'styled-components'
 import Logo from '../images/stuck-digital-logo.png'
 
 const HeaderWrapper = styled.div`
-  background: #efefef;
   color: black;
   margin-bottom: 1.4rem;
   font-size: 1rem;
   img {
-    margin: 0.5rem 2rem;
+    margin: 0 2rem;
     padding: 0 1rem;
   }
 `
@@ -50,7 +49,7 @@ const Header = ({ siteTitle }) => (
               textDecoration: `none`,
             }}
           >
-            <img style={{ width: '100px' }} src={Logo} alt="Stuck Digital" />
+            <img style={{ width: '150px' }} src={Logo} alt="Stuck Digital" />
           </Link>
         </h1>
         <PageLinks>
