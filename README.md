@@ -1,2 +1,4 @@
 #Stuck Digital
-###A Gatsby site for Stuck
+###White-labeled paid social and media buying for agencies and businesses
+
+Built with Gatsby JS
