@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const LISTING_QUERY = graphql`
@@ -15,10 +16,13 @@ const LISTING_QUERY = graphql`
             slug
             date
             cover_image {
-              relativePath
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
             }
           }
-          excerpt
         }
       }
     }
@@ -31,8 +35,10 @@ const CaseStudyListing = () => (
     render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(edge => (
         <article key={edge.node.frontmatter.slug}>
+          <Img
+            fluid={edge.node.frontmatter.cover_image.childImageSharp.fluid}
+          />
           <h2 style={{ fontWeight: '400' }}>{edge.node.frontmatter.title}</h2>
-
           <Link to={`/case-studies${edge.node.frontmatter.slug}`}>
             Read More
           </Link>

@@ -13,13 +13,12 @@ const ListingWrapper = styled.div`
   article {
     box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
     padding: 1rem;
-    border: 4px solid #cccccc;
+    border: 1px solid #cccccc;
     grid-column: span 2;
     grid-row: span 2;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: calc(width);
+    justify-content: space-between; */
   }
 `
 
