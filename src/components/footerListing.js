@@ -6,6 +6,7 @@ const FOOTER_LISTING_QUERY = graphql`
     allMarkdownRemark(
       limit: 4
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/case-studies/" } }
     ) {
       edges {
         node {
@@ -24,11 +25,8 @@ const Footer = () => (
     query={FOOTER_LISTING_QUERY}
     render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(edge => (
-        <li>
-          <Link
-            to={`/case-studies${edge.node.frontmatter.slug}`}
-            key={edge.node.frontmatter.slug}
-          >
+        <li key={edge.node.frontmatter.slug}>
+          <Link to={`/case-studies${edge.node.frontmatter.slug}`}>
             {edge.node.frontmatter.title}
           </Link>
         </li>

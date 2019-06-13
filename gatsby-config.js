@@ -24,6 +24,13 @@ module.exports = {
         path: `${__dirname}/src/case-studies`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Team`,
+        path: `${__dirname}/src/team`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

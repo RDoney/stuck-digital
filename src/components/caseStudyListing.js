@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
 
 const LISTING_QUERY = graphql`
   query {
     allMarkdownRemark(
       limit: 7
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { fileAbsolutePath: { regex: "/case-studies/" } }
     ) {
       edges {
         node {
           frontmatter {
-            title
             slug
+            title
             date
             cover_image {
               childImageSharp {

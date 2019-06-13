@@ -22,13 +22,11 @@ const HeroDesc = styled.h2`
   font-size: 2.5rem;
 `
 
-const Hero = () => (
+const Hero = props => (
   <HeroWrapper>
     <HeroText>
-      <HeroTitle>We Are Stuck Digital.</HeroTitle>
-      <HeroDesc>
-        White-labeled paid social and media buying for agencies and businesses.
-      </HeroDesc>
+      <HeroTitle>{props.title}</HeroTitle>
+      <HeroDesc>{props.description}</HeroDesc>
     </HeroText>
   </HeroWrapper>
 )

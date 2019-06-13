@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CaseStudyListing from '../components/caseStudyListing'
 import Hero from '../components/hero'
+import ContactButton from '../components/utils/ContactButton'
 
 const ListingWrapper = styled.div`
   display: grid;
@@ -32,22 +33,13 @@ const ListingTitle = styled.div`
   }
 `
 
-const ContactButton = styled.button`
-  background: #000;
-  font-size: 2rem;
-  font-family: Roboto Mono;
-  font-weight: 400;
-  padding: 10px 10px;
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-`
-
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero />
+    <Hero
+      title="We Are Stuck Digital."
+      description="White-labeled paid social and media buying for agencies and businesses."
+    />
     <ListingWrapper>
       <ListingTitle>
         <h2>Case Studies</h2>
@@ -62,9 +54,7 @@ const IndexPage = () => (
         margin: '10vh',
       }}
     >
-      <ContactButton>
-        <Link to="/contact">Work With Us</Link>
-      </ContactButton>
+      <ContactButton />
     </div>
   </Layout>
 )

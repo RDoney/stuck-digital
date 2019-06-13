@@ -14,7 +14,7 @@ import Header from './header'
 import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
-  html {
+  body {
     @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
     font-family: Roboto Mono, monospace;
   }
