@@ -2,6 +2,7 @@
 slug: "/second-post"
 date: "2019-06-06"
 title: "The Second Case Study"
+cover_image: "../images/redscreen.png"
 ---
 
 #Another case study

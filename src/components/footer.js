@@ -1,29 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Logo from '../images/stuck-digital-logo.png'
 import FooterListing from './footerListing'
 
-const FOOTER_LISTING_QUERY = graphql`
-  query {
-    allMarkdownRemark(
-      limit: 5
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-          }
-        }
-      }
-    }
-  }
-`
 const FooterWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-gap: 10px;
   border-top: 2px solid #cccccc;
 `

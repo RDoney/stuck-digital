@@ -14,6 +14,9 @@ const LISTING_QUERY = graphql`
             title
             slug
             date
+            cover_image {
+              relativePath
+            }
           }
           excerpt
         }
@@ -29,6 +32,7 @@ const CaseStudyListing = () => (
       allMarkdownRemark.edges.map(edge => (
         <article key={edge.node.frontmatter.slug}>
           <h2 style={{ fontWeight: '400' }}>{edge.node.frontmatter.title}</h2>
+
           <Link to={`/case-studies${edge.node.frontmatter.slug}`}>
             Read More
           </Link>

@@ -9,6 +9,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    `gatsby-remark-copy-linked-files`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,6 +49,12 @@ module.exports = {
         pedantic: true,
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
+      },
+    },
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 1000,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

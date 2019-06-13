@@ -2,6 +2,7 @@
 slug: "/fix-it-sticks"
 date: "2019-06-05"
 title: "Fix It Sticks Case Study"
+cover_image: "../images/billy.png"
 ---
 
 #This is the case study

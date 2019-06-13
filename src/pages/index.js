@@ -9,13 +9,17 @@ import Hero from '../components/hero'
 const ListingWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(autofit, 1fr);
   article {
     box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
     padding: 1rem;
     border: 4px solid #cccccc;
     grid-column: span 2;
     grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(width);
   }
 `
 

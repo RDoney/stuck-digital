@@ -2,6 +2,7 @@
 slug: "/fourth-post"
 date: "2019-06-08"
 title: "The Fourth Case Study"
+cover_image: "../images/ojscreen.png"
 ---
 
 #A fourth case study
