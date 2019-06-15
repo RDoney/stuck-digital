@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import TeamData from '../components/teamData'
+import ClientLogoData from '../components/clientLogoData'
 import ContactCta from '../components/utils/ContactCta'
 
 const WhatWeDo = styled.div`
@@ -35,6 +35,12 @@ const Team = styled.div`
   }
 `
 
+const ClientGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+`
+
 const About = () => (
   <Layout>
     <Hero
@@ -56,6 +62,17 @@ const About = () => (
         <TeamData />
       </div>
     </Team>
+    <div>
+      <h3>Clients</h3>
+      <p>
+        Client sales angel investor network effects. Supply chain research &
+        development metrics hypotheses.
+      </p>
+      <ClientGrid>
+        <ClientLogoData />
+      </ClientGrid>
+    </div>
+
     <ContactCta />
   </Layout>
 )
