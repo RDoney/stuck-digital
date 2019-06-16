@@ -39,6 +39,16 @@ const ClientGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
+  .clientLogoImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 1px solid #cccccc;
+    div {
+      width: 100%;
+    }
+  }
 `
 
 const About = () => (

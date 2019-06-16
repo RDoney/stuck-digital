@@ -10,7 +10,7 @@ const ClientLogoData = () => (
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 250) {
+                fluid(maxWidth: 300) {
                   src
                   ...GatsbyImageSharpFluid
                 }
@@ -22,10 +22,12 @@ const ClientLogoData = () => (
     `}
     render={data =>
       data.allFile.edges.map(edge => (
-        <Img
-          fluid={edge.node.childImageSharp.fluid}
-          key={edge.node.childImageSharp.fluid.src}
-        />
+        <div className="clientLogoImg">
+          <Img
+            fluid={edge.node.childImageSharp.fluid}
+            key={edge.node.childImageSharp.fluid.src}
+          />
+        </div>
       ))
     }
   />

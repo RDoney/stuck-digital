@@ -16,7 +16,7 @@ const TEAM_QUERY = graphql`
               childImageSharp {
                 fluid(maxWidth: 300) {
                   src
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
