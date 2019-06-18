@@ -2,7 +2,15 @@
 slug: "/fix-it-sticks"
 date: "2019-06-05"
 title: "Fix It Sticks Case Study"
+subtitle: "From Kickstarter to exponential growth through Facebook Ads"
 cover_image: "../images/billy.png"
+results:
+  [
+    "420% Increase in Conversion Rate",
+    "59% Decrease in Cost Per Conversion",
+    "4X Return on Ad Spend",
+    "300% Growth Of Things",
+  ]
 ---
 
 #This is the case study

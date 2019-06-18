@@ -2,7 +2,15 @@
 slug: "/fourth-post"
 date: "2019-06-08"
 title: "The Fourth Case Study"
+subtitle: "From Kickstarter to exponential growth through Facebook Ads"
 cover_image: "../images/ojscreen.png"
+results:
+  [
+    "420% Increase in Conversion Rate",
+    "59% Decrease in Cost Per Conversion",
+    "4X Return on Ad Spend",
+    "300% Growth Of Things",
+  ]
 ---
 
 #A fourth case study
