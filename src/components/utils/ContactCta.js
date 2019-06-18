@@ -22,7 +22,8 @@ const CtaWrapper = styled.div`
   grid-template-rows: auto;
   justify-items: center;
   align-items: center;
-  margin: 4rem 0;
+  margin: 4rem auto;
+  width: 90%;
   h3 {
     font-size: 2rem;
     max-width: 300px;

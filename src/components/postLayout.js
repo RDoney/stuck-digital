@@ -8,7 +8,8 @@ import Hero from './hero'
 import ContactCta from './utils/ContactCta'
 
 const ResultsWrapper = styled.div`
-  margin: 2rem;
+  margin: 3rem auto;
+  width: 90%;
   hr {
     border: 1px solid #cccccc;
     margin: 3rem auto;
@@ -22,7 +23,15 @@ const Results = styled.div`
     max-width: 200px;
     border: 2px solid #cccccc;
     text-align: center;
+    p {
+      padding: 0 5px;
+    }
   }
+`
+
+const PostWrapper = styled.div`
+  width: 90%;
+  margin: 1rem auto;
 `
 
 export default class postLayout extends Component {
@@ -57,7 +66,7 @@ export default class postLayout extends Component {
           </Results>
           <hr />
         </ResultsWrapper>
-        <div
+        <PostWrapper
           dangerouslySetInnerHTML={{
             __html: markdownRemark.html,
           }}

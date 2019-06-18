@@ -12,13 +12,29 @@ const ListingWrapper = styled.div`
   grid-template-rows: repeat(autofit, 1fr);
   article {
     box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
-    padding: 1rem;
     border: 1px solid #cccccc;
+    position: relative;
+    height: 30vw;
+    overflow: hidden;
     grid-column: span 2;
     grid-row: span 2;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
+    padding: 10px;
+    h2 {
+      position: relative;
+      z-index: 2;
+    }
+    a {
+      position: relative;
+      z-index: 2;
+      color: #000;
+      background-color: #fff;
+      font-size: 1.5rem;
+      width: 150px;
+      text-align: center;
+    }
   }
 `
 
@@ -26,6 +42,7 @@ const ListingTitle = styled.div`
   grid-column: span 2;
   display: flex;
   justify-content: center;
+  height: 16vw;
   h2 {
     font-weight: 400;
     font-size: 2.5rem;

@@ -35,13 +35,21 @@ const CaseStudyListing = () => (
     render={({ allMarkdownRemark }) =>
       allMarkdownRemark.edges.map(edge => (
         <article key={edge.node.frontmatter.slug}>
-          <Img
-            fluid={edge.node.frontmatter.cover_image.childImageSharp.fluid}
-          />
           <h2 style={{ fontWeight: '400' }}>{edge.node.frontmatter.title}</h2>
           <Link to={`/case-studies${edge.node.frontmatter.slug}`}>
             Read More
           </Link>
+          <Img
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: 1,
+            }}
+            fluid={edge.node.frontmatter.cover_image.childImageSharp.fluid}
+          />
         </article>
       ))
     }

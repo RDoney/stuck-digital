@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const HeroWrapper = styled.div`
   height: 60vh;
+  min-height: 400px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -17,12 +18,12 @@ const HeroText = styled.div`
 `
 const HeroTitle = styled.h1`
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 3.75vw;
 `
 
 const HeroDesc = styled.h2`
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 3.25vw;
 `
 
 const Hero = props => {

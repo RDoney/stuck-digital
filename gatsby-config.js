@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Stuck Digital`,
-    description: `The Stuck Digital site description from config file`,
-    author: `gatsby-config Author`,
+    description: `White-labeled paid social and media buying for agencies and businesses.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
