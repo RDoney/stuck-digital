@@ -12,7 +12,7 @@ const ListingWrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: dense;
 
-  article {
+  .articleLink {
     box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
     position: relative;
     min-height: 30vw;
@@ -27,7 +27,7 @@ const ListingWrapper = styled.div`
       position: relative;
       z-index: 2;
     }
-    a {
+    p {
       position: relative;
       z-index: 2;
       color: #000;
@@ -42,27 +42,9 @@ const ListingWrapper = styled.div`
   }
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    article {
+    .articleLink {
       margin: 1rem;
       height: 50vw;
-    }
-  }
-`
-
-const ListingTitle = styled.div`
-  grid-column: span 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 15vw;
-  h2 {
-    font-weight: 400;
-    font-size: 3.25vw;
-    @media (max-width: 991px) {
-      font-size: 32px;
-    }
-    @media (max-width: 600px) {
-      font-size: 25px;
     }
   }
 `

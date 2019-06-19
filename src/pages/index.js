@@ -11,7 +11,7 @@ const ListingWrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: dense;
 
-  article {
+  .articleLink {
     box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
     position: relative;
     min-height: 30vw;
@@ -26,7 +26,7 @@ const ListingWrapper = styled.div`
       position: relative;
       z-index: 2;
     }
-    a {
+    p {
       position: relative;
       z-index: 2;
       color: #000;
@@ -41,7 +41,7 @@ const ListingWrapper = styled.div`
   }
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    article {
+    .articleLink {
       margin: 1rem;
       height: 50vw;
     }

@@ -34,7 +34,7 @@ const CtaWrapper = styled.div`
     padding: 2.5rem;
     border: 2px solid #cccccc;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 991px) {
     margin-bottom: 6rem;
     button {
       margin-bottom: 3rem;

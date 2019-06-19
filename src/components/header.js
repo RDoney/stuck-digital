@@ -64,7 +64,7 @@ const MobileLinks = styled.div`
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: -788px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 80vh;
@@ -88,9 +88,9 @@ class Header extends React.Component {
   handleClick = e => {
     e.preventDefault()
     this.setState({
-      menuOpen: true,
+      menuOpen: !this.state.menuOpen,
     })
-    console.log(this.state)
+    console.log(this.state.menuOpen)
   }
 
   render() {
@@ -117,11 +117,14 @@ class Header extends React.Component {
               <Link to="/case-studies">CASE STUDIES</Link>
               <Link to="/contact">CONTACT</Link>
             </PageLinks>
-            <MobileLinks>
-              <Link to="/about">ABOUT</Link>
-              <Link to="/case-studies">CASE STUDIES</Link>
-              <Link to="/contact">CONTACT</Link>
-            </MobileLinks>
+            {/* TODO: prevent scroll when menu is open - put full height element underneath? */}
+            {this.state.menuOpen && (
+              <MobileLinks>
+                <Link to="/about">ABOUT</Link>
+                <Link to="/case-studies">CASE STUDIES</Link>
+                <Link to="/contact">CONTACT</Link>
+              </MobileLinks>
+            )}
           </Navbar>
           <button type="button" onClick={this.handleClick}>
             Burger
