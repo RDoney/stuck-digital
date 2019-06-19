@@ -28,9 +28,10 @@ const TEAM_QUERY = graphql`
 `
 
 const Card = styled.div`
-  display: grid;
-  grid-template-rows: 3fr 1fr;
-  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
   img {
     width: 100%;
   }
@@ -47,6 +48,14 @@ const Card = styled.div`
   p {
     font-size: 1.2rem;
     margin: 5px 0;
+  }
+  @media (max-width: 991px) {
+    .team-name {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `
 

@@ -3,41 +3,48 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Hero from '../components/hero'
+import placeholder from '../../static/placeholder.jpeg'
 
 const ContactMain = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
   width: 90%;
-  margin: 1rem auto;
+  margin: 1rem auto 10vw;
+`
+
+const FormWrapper = styled.div`
+  h3 {
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+  }
 `
 
 const Form = styled.form`
   margin: 0 auto;
-  width: 90%;
   input {
     display: block;
     width: 80%;
     font-family: inherit;
     font-size: 1rem;
     padding: 15px;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 0;
     border: 1px solid #000;
   }
   textarea {
-    display: block;
-    max-width: 80%;
+    width: 80%;
     font-family: inherit;
     font-size: 1rem;
     padding: 15px;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 0;
     border: 1px solid #000;
+    height: 12vw;
   }
   input[type='submit'] {
     color: #fff;
     background-color: #000;
     font-size: 1.25rem;
     width: auto;
-    padding: 8px 12px;
+    padding: 6px 12px;
     cursor: pointer;
   }
 `
@@ -50,23 +57,38 @@ const IndexPage = () => (
       description="Business-to-consumer alpha develop design prototype infographic."
     />
     <ContactMain>
-      <Form method="post" action="/">
-        <input type="text" name="name" id="name" placeholder="Name" />
-
-        <input type="text" name="email" id="email" placeholder="Email" />
-
-        <input type="text" name="subject" id="subject" placeholder="Subject" />
-        <textarea
-          name="message"
-          id="message"
-          cols="40"
-          rows="10"
-          placeholder="Message"
-        />
-        <input type="submit" value="Submit" />
-      </Form>
-      <div>
-        <p>map goes here</p>
+      <FormWrapper>
+        <h3>Fill out the form below, and we will be in touch shortly!</h3>
+        <Form method="post" action="/">
+          <div>
+            <input type="text" name="name" id="name" placeholder="Name" />
+          </div>
+          <div>
+            <input type="text" name="email" id="email" placeholder="Email" />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+            />
+          </div>
+          <div>
+            <textarea name="message" id="message" placeholder="Message" />
+          </div>
+          <input type="submit" value="Submit" />
+        </Form>
+      </FormWrapper>
+      {/* TODO: embed map */}
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div>
+          <img
+            src={placeholder}
+            alt="placeholder"
+            style={{ width: '100%', margin: '0 auto', display: 'block' }}
+          />
+        </div>
       </div>
     </ContactMain>
   </Layout>

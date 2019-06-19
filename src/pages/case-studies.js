@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import SEO from '../components/seo'
 import Listing from '../components/caseStudyListing'
+import ContactButton from '../components/utils/ContactButton'
 
 const ListingWrapper = styled.div`
   display: grid;
@@ -71,11 +72,18 @@ const IndexPage = () => (
     <SEO title="Case Studies" />
     <Hero title="Case Studies" />
     <ListingWrapper>
-      <ListingTitle>
-        <h2>Recent Work</h2>
-      </ListingTitle>
       <Listing />
     </ListingWrapper>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '10vh',
+      }}
+    >
+      <ContactButton />
+    </div>
   </Layout>
 )
 

@@ -7,9 +7,10 @@ const StyledButton = styled.button`
   font-family: Roboto Mono;
   font-weight: 400;
   padding: 10px 10px;
-  font-size: 32px;
+  max-width: 220px;
+  font-size: 27px;
   @media (max-width: 600px) {
-    font-size: 25px;
+    font-size: 24px;
   }
   a {
     color: #fff;
