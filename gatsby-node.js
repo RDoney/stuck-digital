@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMarkdownRemark(filter: { frontmatter: { slug: { regex: "///" } } }) {
           edges {
             node {
               frontmatter {
