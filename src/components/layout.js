@@ -1,14 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled, { createGlobalStyle } from 'styled-components'
+import FontRegUrl from '../../static/fonts/roboto-mono-v6-latin-regular.woff2'
+import FontBoldUrl from '../../static/fonts/roboto-mono-v6-latin-700.woff2'
 
 import Header from './header'
 import Footer from './footer'
@@ -24,8 +19,19 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap');
-    font-family: Roboto Mono, monospace;
+    font-family: Roboto Mono;
+    @font-face {
+    font-family: 'Roboto Mono';
+    src: url(${FontRegUrl}) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    }
+    @font-face {
+      font-family: 'Roboto Mono';
+      src: url(${FontBoldUrl}) format('woff2');
+      font-weight: 700;
+      font-style: normal;
+    }
   }
 `
 
