@@ -12,13 +12,18 @@ const HeaderWrapper = styled.div`
     margin: 0 2rem;
     padding: 0 1rem;
   }
+  @media (max-width: 991px) {
+    img {
+      margin: 0;
+    }
+  }
 `
 
 const Navbar = styled.div`
   display: flex;
   flex-direction: row;
   h1 {
-    margin-bottom: 0;
+    margin: 0;
   }
 `
 

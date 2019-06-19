@@ -9,12 +9,12 @@ import ContactButton from '../components/utils/ContactButton'
 const ListingWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(autofit, 1fr);
+  grid-auto-flow: dense;
+
   article {
     box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
-    border: 1px solid #cccccc;
     position: relative;
-    height: 30vw;
+    min-height: 30vw;
     overflow: hidden;
     grid-column: span 2;
     grid-row: span 2;
@@ -36,16 +36,33 @@ const ListingWrapper = styled.div`
       text-align: center;
     }
   }
+  @media (max-width: 991px) {
+    margin-top: 3rem;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    article {
+      margin: 1rem;
+      height: 50vw;
+    }
+  }
 `
 
 const ListingTitle = styled.div`
   grid-column: span 2;
   display: flex;
   justify-content: center;
-  height: 16vw;
+  align-items: center;
+  min-height: 15vw;
   h2 {
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 3.25vw;
+    @media (max-width: 991px) {
+      font-size: 32px;
+    }
+    @media (max-width: 600px) {
+      font-size: 25px;
+    }
   }
 `
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import Hero from '../components/hero'
 import TeamData from '../components/teamData'
 import ClientLogoData from '../components/clientLogoData'
@@ -53,6 +54,7 @@ const ClientGrid = styled.div`
 
 const About = () => (
   <Layout>
+    <SEO title="About" />
     <Hero
       title="About"
       description="Business-to-consumer alpha develop design prototype infographic. Social media handshake leverage crowdfunding."

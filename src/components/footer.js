@@ -6,7 +6,7 @@ import FooterListing from './footerListing'
 
 const FooterWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
   border-top: 2px solid #cccccc;
 `

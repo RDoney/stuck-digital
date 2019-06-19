@@ -4,10 +4,13 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
   background: #000;
-  font-size: 2rem;
   font-family: Roboto Mono;
   font-weight: 400;
   padding: 10px 10px;
+  font-size: 32px;
+  @media (max-width: 600px) {
+    font-size: 25px;
+  }
   a {
     color: #fff;
     text-decoration: none;
