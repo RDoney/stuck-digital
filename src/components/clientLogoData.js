@@ -22,11 +22,11 @@ const ClientLogoData = () => (
     `}
     render={data =>
       data.allFile.edges.map(edge => (
-        <div className="clientLogoImg">
-          <Img
-            fluid={edge.node.childImageSharp.fluid}
-            key={edge.node.childImageSharp.fluid.src}
-          />
+        <div
+          className="clientLogoImg"
+          key={edge.node.childImageSharp.fluid.src}
+        >
+          <Img fluid={edge.node.childImageSharp.fluid} />
         </div>
       ))
     }

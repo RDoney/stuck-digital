@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import Logo from '../images/stuck-digital-logo.png'
+import Logo from '../images/stuckDigitalLogo.svg'
 import FooterListing from './footerListing'
 
 const FooterWrapper = styled.div`

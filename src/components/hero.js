@@ -53,6 +53,7 @@ const Hero = props => {
   const properties = useSpring({
     to: { opacity: 1, marginTop: '0' },
     from: { opacity: 0, marginTop: '50px' },
+    delay: '250',
   })
 
   return (

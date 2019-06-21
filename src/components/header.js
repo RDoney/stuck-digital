@@ -1,8 +1,8 @@
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated, config } from 'react-spring'
 import styled from 'styled-components'
-import Logo from '../images/stuck-digital-logo.png'
+import Logo from '../images/stuckDigitalLogo.svg'
 
 const HeaderWrapper = styled(animated.div)`
   color: black;
@@ -35,9 +35,6 @@ const HeaderWrapper = styled(animated.div)`
 const Navbar = styled.div`
   display: flex;
   flex-direction: row;
-  h1 {
-    margin: 0;
-  }
 `
 
 const PageLinks = styled.div`
@@ -84,7 +81,11 @@ const MobileLinks = styled.div`
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const props = useSpring({ opacity: 1, from: { opacity: 0 } })
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: config.molasses,
+  })
 
   return (
     <header>
