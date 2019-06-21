@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useSpring, animated } from 'react-spring'
 
 const HeroWrapper = styled.div`
   height: 60vw;
@@ -11,7 +12,7 @@ const HeroWrapper = styled.div`
   align-items: center;
 `
 
-const HeroText = styled.div`
+const HeroText = styled(animated.div)`
   width: 50vw;
   margin-left: 6rem;
   position: relative;
@@ -49,10 +50,14 @@ const HeroDesc = styled.h2`
 
 const Hero = props => {
   const { title, description, children } = props
+  const properties = useSpring({
+    to: { opacity: 1, marginTop: '0' },
+    from: { opacity: 0, marginTop: '50px' },
+  })
 
   return (
     <HeroWrapper>
-      <HeroText>
+      <HeroText style={properties}>
         <HeroTitle>{title}</HeroTitle>
         <HeroDesc>{description}</HeroDesc>
       </HeroText>

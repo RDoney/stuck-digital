@@ -1,9 +1,10 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import React, { useState } from 'react'
+import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 import Logo from '../images/stuck-digital-logo.png'
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled(animated.div)`
   color: black;
   margin-bottom: 1.4rem;
   font-size: 1rem;
@@ -80,59 +81,45 @@ const MobileLinks = styled.div`
     display: none;
   }
 `
-class Header extends React.Component {
-  state = {
-    menuOpen: false,
-  }
 
-  handleClick = e => {
-    e.preventDefault()
-    this.setState({
-      menuOpen: !this.state.menuOpen,
-    })
-    console.log(this.state.menuOpen)
-  }
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const props = useSpring({ opacity: 1, from: { opacity: 0 } })
 
-  render() {
-    return (
-      <header>
-        <HeaderWrapper>
-          <Navbar>
-            <h1>
-              <Link
-                to="/"
-                style={{
-                  textDecoration: `none`,
-                }}
-              >
-                <img
-                  style={{ width: '150px' }}
-                  src={Logo}
-                  alt="Stuck Digital"
-                />
-              </Link>
-            </h1>
-            <PageLinks>
+  return (
+    <header>
+      <HeaderWrapper style={props}>
+        <Navbar>
+          <h1>
+            <Link
+              to="/"
+              style={{
+                textDecoration: `none`,
+              }}
+            >
+              <img style={{ width: '150px' }} src={Logo} alt="Stuck Digital" />
+            </Link>
+          </h1>
+          <PageLinks>
+            <Link to="/about">ABOUT</Link>
+            <Link to="/case-studies">CASE STUDIES</Link>
+            <Link to="/contact">CONTACT</Link>
+          </PageLinks>
+          {/* TODO: prevent scroll when menu is open - put full height element underneath? */}
+          {menuOpen && (
+            <MobileLinks>
               <Link to="/about">ABOUT</Link>
               <Link to="/case-studies">CASE STUDIES</Link>
               <Link to="/contact">CONTACT</Link>
-            </PageLinks>
-            {/* TODO: prevent scroll when menu is open - put full height element underneath? */}
-            {this.state.menuOpen && (
-              <MobileLinks>
-                <Link to="/about">ABOUT</Link>
-                <Link to="/case-studies">CASE STUDIES</Link>
-                <Link to="/contact">CONTACT</Link>
-              </MobileLinks>
-            )}
-          </Navbar>
-          <button type="button" onClick={this.handleClick}>
-            Burger
-          </button>
-        </HeaderWrapper>
-      </header>
-    )
-  }
+            </MobileLinks>
+          )}
+        </Navbar>
+        <button type="button" onClick={() => setMenuOpen(!menuOpen)}>
+          Burger
+        </button>
+      </HeaderWrapper>
+    </header>
+  )
 }
 
 // Header.propTypes = {

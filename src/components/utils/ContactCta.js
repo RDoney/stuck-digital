@@ -10,7 +10,7 @@ const CTA_IMG_QUERY = graphql`
       childImageSharp {
         fluid(maxWidth: 500) {
           src
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }
