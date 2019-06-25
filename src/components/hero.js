@@ -51,8 +51,8 @@ const HeroDesc = styled.h2`
 const Hero = props => {
   const { title, description, children } = props
   const properties = useSpring({
-    to: { opacity: 1, marginTop: '0' },
-    from: { opacity: 0, marginTop: '50px' },
+    to: { opacity: 1, transform: 'translate3d(0,0,0)' },
+    from: { opacity: 0, transform: 'translate3d(0,20px,0)' },
     delay: '250',
   })
 

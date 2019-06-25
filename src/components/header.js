@@ -1,7 +1,8 @@
 import { Link } from 'gatsby'
 import React, { useState } from 'react'
-import { useSpring, animated, config } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
+import MobileNav from './mobileNav'
 import Logo from '../images/stuckDigitalLogo.svg'
 
 const HeaderWrapper = styled(animated.div)`
@@ -16,9 +17,17 @@ const HeaderWrapper = styled(animated.div)`
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1rem;
+    margin: 2rem 1rem;
     display: none;
     z-index: 11;
+    background: none;
+    border: none;
+    svg {
+      width: 25px;
+      path {
+        transform-origin: 18%;
+      }
+    }
   }
   @media (max-width: 991px) {
     img {
@@ -32,7 +41,7 @@ const HeaderWrapper = styled(animated.div)`
   }
 `
 
-const Navbar = styled.div`
+const Navbar = styled.nav`
   display: flex;
   flex-direction: row;
 `
@@ -56,40 +65,33 @@ const PageLinks = styled.div`
   }
 `
 
-const MobileLinks = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80vh;
-  background: #010101;
-  z-index: 10;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-  a {
-    color: #fff;
-    font-size: 30px;
-    margin: 3rem auto;
-  }
-  @media (min-width: 600px) {
-    display: none;
-  }
-`
-
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const props = useSpring({
+  const [isMenuOpen, setMenuOpen] = useState(false)
+  const navAnimation = useSpring({
+    transform: isMenuOpen
+      ? 'translate3d(0,0,0) scale(1)'
+      : 'translate3d(100%,-80%,0) scale(0.5)',
+  })
+  const burgerTop = useSpring({
+    fill: isMenuOpen ? '#fff' : '#000',
+    transform: isMenuOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+  })
+  const burgerBtm = useSpring({
+    fill: isMenuOpen ? '#fff' : '#000',
+    transform: isMenuOpen ? 'rotate(-45deg)' : 'rotate(0deg)',
+  })
+  const burgerMid = useSpring({
+    fill: isMenuOpen ? 'green' : '#000',
+    opacity: isMenuOpen ? '0' : '1',
+  })
+  const fade = useSpring({
     opacity: 1,
     from: { opacity: 0 },
-    config: config.molasses,
   })
 
   return (
     <header>
-      <HeaderWrapper style={props}>
+      <HeaderWrapper style={fade}>
         <Navbar>
           <h1>
             <Link
@@ -106,17 +108,41 @@ const Header = () => {
             <Link to="/case-studies">CASE STUDIES</Link>
             <Link to="/contact">CONTACT</Link>
           </PageLinks>
-          {/* TODO: prevent scroll when menu is open - put full height element underneath? */}
-          {menuOpen && (
-            <MobileLinks>
-              <Link to="/about">ABOUT</Link>
-              <Link to="/case-studies">CASE STUDIES</Link>
-              <Link to="/contact">CONTACT</Link>
-            </MobileLinks>
-          )}
         </Navbar>
-        <button type="button" onClick={() => setMenuOpen(!menuOpen)}>
-          Burger
+        <MobileNav style={navAnimation} />
+        <button type="button" onClick={() => setMenuOpen(!isMenuOpen)}>
+          <svg x="0px" y="0px" viewBox="0 0 512 512">
+            <g>
+              <g>
+                <animated.path
+                  style={burgerTop}
+                  className="top"
+                  d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <animated.path
+                  style={burgerMid}
+                  className="middle"
+                  d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"
+                />
+              </g>
+            </g>
+            <g>
+              <g>
+                <animated.path
+                  style={burgerBtm}
+                  className="bottom"
+                  d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636
+			c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"
+                />
+              </g>
+            </g>
+          </svg>
         </button>
       </HeaderWrapper>
     </header>
