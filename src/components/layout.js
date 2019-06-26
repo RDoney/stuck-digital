@@ -32,6 +32,21 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 700;
       font-style: normal;
     }
+    /* a {
+      color: #000;
+      position: relative;
+    }
+    a:before {
+      height: 8px;
+      background-color: #ee4c72;
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      z-index: -1;
+      } */
   }
 `
 
