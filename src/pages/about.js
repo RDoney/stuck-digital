@@ -9,9 +9,9 @@ import TeamData from '../components/teamData'
 import ClientLogoData from '../components/clientLogoData'
 import ContactCta from '../components/utils/ContactCta'
 
-const WhatWeDo = styled(animated.div)`
+const PageDescription = styled(animated.div)`
   width: 80%;
-  margin: 5rem auto;
+  margin: 3rem auto;
   h3 {
     font-size: 2.75vw;
   }
@@ -69,8 +69,17 @@ const ClientWrapper = styled.div`
   h3 {
     font-size: 2.75vw;
   }
-  p {
+  ul {
+    margin-bottom: 4rem;
+  }
+  li {
     font-size: 2vw;
+    padding: 0.5rem;
+    list-style-type: square;
+  }
+  h4 {
+    font-size: 1.2rem;
+    margin-top: 3vw;
   }
   @media (max-width: 991px) {
     width: 90%;
@@ -78,7 +87,7 @@ const ClientWrapper = styled.div`
     h3 {
       font-size: 28px;
     }
-    p {
+    li {
       font-size: 21px;
     }
   }
@@ -88,7 +97,7 @@ const ClientWrapper = styled.div`
     h3 {
       font-size: 23px;
     }
-    p {
+    li {
       font-size: 18px;
     }
   }
@@ -173,17 +182,20 @@ const About = () => {
       <SEO title="About" />
       <Hero
         title="About"
-        description="Business-to-consumer alpha develop design prototype infographic. Social media handshake leverage crowdfunding."
+        description="We are passionate about helping businesses scale, which is why we focus on paid acquisition. It’s all we do, which is why we do it best."
       />
-      <WhatWeDo ref={ref} style={fadeUp}>
+      <PageDescription ref={ref} style={fadeUp}>
         <h3>What We Bring To The Table</h3>
         <p>
-          Iteration MVP sales twitter infrastructure startup user experience
-          prototype research &amp; development. Return on investment business
-          model canvas termsheet client sales angel investor network effects.
-          Supply chain research &amp; development metrics hypotheses.
+          We are experts paid social and media buying. We are a group of
+          entrepreneurs who are dedicated to making business scale, both our own
+          and yours! We know the ropes because we’ve done it, we understand that
+          pain points that direct to consumer brands face because we have faced
+          them ourselves with our own brands. Helping businesses achieve their
+          dreams is a collective process that all parties receive intrinsic and
+          extrinsic rewards.
         </p>
-      </WhatWeDo>
+      </PageDescription>
       <Team>
         <h3>Team</h3>
         <div className="team-data-wrapper">
@@ -191,11 +203,20 @@ const About = () => {
         </div>
       </Team>
       <ClientWrapper>
-        <h3>Clients</h3>
-        <p>
-          Client sales angel investor network effects. Supply chain research &
-          development metrics hypotheses.
-        </p>
+        <h3>Our Best Clients Are:</h3>
+        <ul>
+          <li>
+            eCommerce businesses struggling to take their sales to the next
+            level.
+          </li>
+          <li>
+            Agencies that need help with the overmling demands of their clients.
+          </li>
+          <li>
+            Agencies that are overwhelmed meeting the demands of their clients
+          </li>
+        </ul>
+        <h4>Past Clients</h4>
         <ClientGrid>
           <ClientLogoData />
         </ClientGrid>

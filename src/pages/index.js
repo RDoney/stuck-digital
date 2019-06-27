@@ -66,12 +66,25 @@ const ListingTitle = styled.div`
   }
 `
 
+const HomeCTA = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh;
+  text-align: center;
+  p {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Hero
       title="We Are Stuck Digital."
-      description="White-labeled paid social and media buying for agencies and businesses."
+      description="We help ecommerce businesses scale profitability through paid social and media buying."
     />
     <ListingWrapper>
       <ListingTitle>
@@ -79,16 +92,10 @@ const IndexPage = () => (
       </ListingTitle>
       <CaseStudyListing />
     </ListingWrapper>
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        margin: '10vh',
-      }}
-    >
+    <HomeCTA>
+      <p>Is your business ready to scale?</p>
       <ContactButton />
-    </div>
+    </HomeCTA>
   </Layout>
 )
 
