@@ -1,0 +1,20 @@
+backend:
+  name: github
+  branch: master
+  repo: RDoney/stuck-digital
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "Case Studies"
+    label: "Case Studies"
+    folder: "src/case-studies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Case Study", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Cover Image", name: "cover_image", widget: "image" }
+      - { label: "Post Content", name: "body", widget: "markdown" }

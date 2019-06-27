@@ -32,13 +32,21 @@ const GlobalStyle = createGlobalStyle`
       font-weight: 700;
       font-style: normal;
     }
-    /* a {
+    a {
       color: #000;
       position: relative;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    a:hover {
+      color: #fff;
+      &:before {
+        height: 100%;
+      }
     }
     a:before {
-      height: 8px;
-      background-color: #ee4c72;
+      height: 3px;
+      background-color: #F7913E;
       content: '';
       display: block;
       position: absolute;
@@ -46,7 +54,11 @@ const GlobalStyle = createGlobalStyle`
       width: 100%;
       left: 0;
       z-index: -1;
-      } */
+      transition: all 0.2s;
+      }
+  }
+  .main-logo:before {
+    display: none;
   }
 `
 

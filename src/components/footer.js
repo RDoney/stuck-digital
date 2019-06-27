@@ -53,11 +53,16 @@ const Footer = () => (
       <div>
         <Link
           to="/"
+          className="main-logo"
           style={{
             textDecoration: `none`,
           }}
         >
-          <img style={{ width: '100%' }} src={Logo} alt="Stuck Digital" />
+          <img
+            style={{ width: '100%', marginTop: '2rem' }}
+            src={Logo}
+            alt="Stuck Digital"
+          />
         </Link>
       </div>
     </FooterWrapper>

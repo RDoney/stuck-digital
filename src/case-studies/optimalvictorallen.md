@@ -1,9 +1,9 @@
 ---
-slug: "/fix-it-sticks"
-date: "2019-06-05"
-title: "Fix It Sticks"
+slug: "/optimal-victorallen"
+date: "2019-06-07"
+title: "Optimal - Victor Allen"
 subtitle: "From Kickstarter to exponential growth through Facebook Ads"
-cover_image: "../images/billy.png"
+cover_image: "../images/appscreen.png"
 results:
   [
     "420% Increase in Conversion Rate",
@@ -15,11 +15,16 @@ results:
 
 ## The Client
 
-Fix It Sticks is a highly modular multi-tool system featuring a variety of specialty tools and torque limiters. They were looking to scale their ecommerce sales by utilizing Facebook and Instagram ads. Combined with new, powerful video creative and compelling ad copy, we took their brand to the next level by increasing their sales by 3x in 4 months.
+Victor Allen’s was looking to scale their single serve coffee servings ecommerce sales utilizing. We had the opportunity to partner with Optimal Digital Marketing to be apart of their overall strategy by handling the media buying for Facebook and Instagram.
 
 ## The Goal
 
 Grow website traffic and revenue through paid social
+
+## Strategy
+
+- Facebook Remarketing
+- Spend \$1M at 2X ROAS
 
 ## Testimonial
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { useInView } from 'react-intersection-observer'
 
 const LISTING_QUERY = graphql`
   query {

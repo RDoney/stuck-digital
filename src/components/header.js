@@ -54,11 +54,9 @@ const PageLinks = styled.div`
   a {
     text-decoration: none;
   }
-  a:not(:last-child) {
-    ::after {
-      content: '|';
-      padding: 0 1rem;
-    }
+  span {
+    margin: 0 1rem;
+    display: block;
   }
   @media (max-width: 600px) {
     display: none;
@@ -96,6 +94,7 @@ const Header = () => {
           <h1>
             <Link
               to="/"
+              className="main-logo"
               style={{
                 textDecoration: `none`,
               }}
@@ -105,7 +104,9 @@ const Header = () => {
           </h1>
           <PageLinks>
             <Link to="/about">ABOUT</Link>
+            <span>|</span>
             <Link to="/case-studies">CASE STUDIES</Link>
+            <span>|</span>
             <Link to="/contact">CONTACT</Link>
           </PageLinks>
         </Navbar>

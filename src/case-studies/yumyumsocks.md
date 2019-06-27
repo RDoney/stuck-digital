@@ -1,9 +1,9 @@
 ---
-slug: "/fix-it-sticks"
-date: "2019-06-05"
-title: "Fix It Sticks"
-subtitle: "From Kickstarter to exponential growth through Facebook Ads"
-cover_image: "../images/billy.png"
+slug: "/yumyumsocks"
+date: "2019-06-08"
+title: "Yum Yum Socks"
+subtitle: "The Yum Yum Socks case study subtitle"
+cover_image: "../images/ojscreen.png"
 results:
   [
     "420% Increase in Conversion Rate",
@@ -15,11 +15,16 @@ results:
 
 ## The Client
 
-Fix It Sticks is a highly modular multi-tool system featuring a variety of specialty tools and torque limiters. They were looking to scale their ecommerce sales by utilizing Facebook and Instagram ads. Combined with new, powerful video creative and compelling ad copy, we took their brand to the next level by increasing their sales by 3x in 4 months.
+YumYum Socks is a fun and colorful clothing brand only selling socks. They were looking to scale their website sales by utilizing Facebook and Instagram ads and within just 3 months we increased their sales by 2X!
 
 ## The Goal
 
 Grow website traffic and revenue through paid social
+
+## Strategy
+
+- Facebook Remarketing
+- Developed engaging creative that increased ROAS and decreased CPM
 
 ## Testimonial
 

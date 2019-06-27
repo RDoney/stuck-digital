@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
@@ -8,37 +8,7 @@ import Hero from '../components/hero'
 import TeamData from '../components/teamData'
 import ClientLogoData from '../components/clientLogoData'
 import ContactCta from '../components/utils/ContactCta'
-
-const PageDescription = styled(animated.div)`
-  width: 80%;
-  margin: 3rem auto;
-  h3 {
-    font-size: 2.75vw;
-  }
-  p {
-    font-size: 2vw;
-  }
-  @media (max-width: 991px) {
-    margin-left: 3rem;
-    width: 90%;
-    h3 {
-      font-size: 28px;
-    }
-    p {
-      font-size: 21px;
-    }
-  }
-  @media (max-width: 600px) {
-    margin-left: 1rem;
-    width: 100%;
-    h3 {
-      font-size: 23px;
-    }
-    p {
-      font-size: 18px;
-    }
-  }
-`
+import PageDescription from '../components/utils/PageDescription'
 
 const Team = styled.div`
   width: 80%;
@@ -118,6 +88,7 @@ const ClientGrid = styled.div`
       width: 100%;
     }
   }
+  /* TODO: Refactor this mess */
   .clientLogoImg:nth-of-type(1) {
     border-top: none;
     border-left: none;
@@ -174,7 +145,7 @@ const About = () => {
   const fadeUp = useSpring({
     to: { opacity: 1, transform: 'translate3d(0,0,0)' },
     from: { opacity: 0, transform: 'translate3d(0,20px,0)' },
-    immediate: inView,
+    delay: () => (inView ? 1 : 5000),
   })
 
   return (

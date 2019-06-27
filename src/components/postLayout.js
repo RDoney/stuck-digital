@@ -23,6 +23,8 @@ const Results = styled.div`
     max-width: 200px;
     border: 2px solid #cccccc;
     text-align: center;
+    display: flex;
+    align-items: center;
     p {
       padding: 0 5px;
     }

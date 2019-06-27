@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import PageDescription from '../components/utils/PageDescription'
 import CaseStudyListing from '../components/caseStudyListing'
 import Hero from '../components/hero'
 import ContactButton from '../components/utils/ContactButton'
@@ -20,11 +21,20 @@ const ListingWrapper = styled.div`
     grid-row: span 2;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 10px;
+    transition: all 0.3s;
+    &:hover {
+      h2 {
+        background-color: #000;
+        padding: 2px;
+      }
+    }
     h2 {
       position: relative;
       z-index: 2;
+      display: inline;
     }
     p {
       position: relative;
@@ -34,8 +44,18 @@ const ListingWrapper = styled.div`
       font-size: 1.5rem;
       width: 150px;
       text-align: center;
+      transition: all 0.2s;
+      &:hover {
+        color: #fff;
+        background-color: #000;
+        padding: 5px;
+      }
+    }
+    &:before {
+      display: none;
     }
   }
+
   @media (max-width: 991px) {
     margin-top: 3rem;
   }
@@ -86,6 +106,19 @@ const IndexPage = () => (
       title="We Are Stuck Digital."
       description="We help ecommerce businesses scale profitability through paid social and media buying."
     />
+    <PageDescription>
+      <h3>
+        Are you struggling to take your ecommerce sales to the next level?{' '}
+      </h3>
+      <p>
+        You’ve worked incredibly hard to build your ecommerce business to where
+        it is today but getting to the next level can be a frustrating task if
+        you lack the expertise and know how of the ins and outs of today’s
+        digital advertising platforms. That’s where we come in. We are experts
+        in paid social and media buying and have worked with dozens of clients
+        to get more traction, more traffic, and more sales.
+      </p>
+    </PageDescription>
     <ListingWrapper>
       <ListingTitle>
         <h2>Case Studies</h2>

@@ -11,11 +11,26 @@ const ContactMain = styled.div`
   width: 90%;
   margin: 1rem auto 10vw;
 `
-
+const QuestionWrapper = styled.div`
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    display: inline;
+  }
+  hr {
+    width: 80%;
+    margin: 4rem auto;
+  }
+`
 const FormWrapper = styled.div`
   h3 {
     margin-bottom: 2.5rem;
     max-width: 500px;
+    font-weight: 300;
   }
 `
 
@@ -56,9 +71,22 @@ const IndexPage = () => (
       title="Contact Us"
       description="Business-to-consumer alpha develop design prototype infographic."
     />
+    <QuestionWrapper>
+      <h2>
+        Are you a media buyer that needs help meeting your overwhelming demand?
+      </h2>
+      <h2>
+        Are you a business that is ready to harness the power of digital
+        advertising to scale your business to the next level?
+      </h2>
+      <hr />
+    </QuestionWrapper>
     <ContactMain>
       <FormWrapper>
-        <h3>Fill out the form below, and we will be in touch shortly!</h3>
+        <h3>
+          We would love to talk and find out if we are a good fit, just fill out
+          the from below to get started!
+        </h3>
         <Form method="post" action="/">
           <div>
             <input type="text" name="name" id="name" placeholder="Name" />
