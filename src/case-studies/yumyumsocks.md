@@ -3,7 +3,7 @@ slug: "/yumyumsocks"
 date: "2019-06-08"
 title: "Yum Yum Socks"
 subtitle: "The Yum Yum Socks case study subtitle"
-cover_image: "../images/ojscreen.png"
+cover_image: "../images/yumyum-header.jpg"
 results:
   [
     "420% Increase in Conversion Rate",

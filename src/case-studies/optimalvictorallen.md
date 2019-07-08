@@ -3,7 +3,7 @@ slug: "/optimal-victorallen"
 date: "2019-06-07"
 title: "Optimal - Victor Allen"
 subtitle: "From Kickstarter to exponential growth through Facebook Ads"
-cover_image: "../images/appscreen.png"
+cover_image: "../images/victorallen-header.jpg"
 results:
   [
     "420% Increase in Conversion Rate",

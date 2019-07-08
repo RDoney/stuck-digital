@@ -45,6 +45,10 @@ const Form = styled.form`
     margin: 1rem 1rem 1rem 0;
     border: 1px solid #000;
   }
+  input:focus,
+  textarea:focus {
+    outline: 2px solid #f7913e;
+  }
   textarea {
     width: 80%;
     font-family: inherit;

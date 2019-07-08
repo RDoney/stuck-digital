@@ -3,7 +3,7 @@ slug: "/poppyseedgoods"
 date: "2019-06-06"
 title: "Poppyseed Goods"
 subtitle: "The subtitle for poppyseed goods case study"
-cover_image: "../images/redscreen.png"
+cover_image: "../images/poppyseed-header.jpg"
 results:
   [
     "400% Increase in Sales",

@@ -3,7 +3,7 @@ slug: "/fix-it-sticks"
 date: "2019-06-05"
 title: "Fix It Sticks"
 subtitle: "From Kickstarter to exponential growth through Facebook Ads"
-cover_image: "../images/billy.png"
+cover_image: "../images/fixitsticks-header.jpg"
 results:
   [
     "420% Increase in Conversion Rate",
